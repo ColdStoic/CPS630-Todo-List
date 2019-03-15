@@ -1,7 +1,7 @@
 html, body, main {
     background-image: linear-gradient(to bottom right, rgba(0, 200, 255, 0.082), rgba(0, 255, 42, 0.021));
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 22px;
     height: 100%;
     margin: 0;
     min-width: 600px;
@@ -45,6 +45,10 @@ html, body, main {
     justify-content: center; /* centers all content (widgets) */
 }
 
+.todo-container-main {
+    width: 550px;
+}
+
 .drop-box-container {
     display: flex;
     justify-content: center;
@@ -68,13 +72,75 @@ html, body, main {
         text-align: center;
     }
 
-#map {
-    height: 500px;
-    width: 95%;
+.todo-container {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 1px 1px 50px 1px #e7e7e7;
+    border: solid black 1px;
 }
-    .tooltip {
-        font-size: 15px;
-        font-weight: bold;
+    .todo-top-container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 10px 0px;
+        border-bottom: solid black 1px;
+    }
+    .todo-checkbox {
+        display: flex;
+        width: 6%;
+        justify-content: center;
+    }
+    .todo-task {
+        width: 88%;
+        padding-left: 1%;
+    }
+    .todo-remove {
+        display: flex;
+        width: 5%;
+        justify-content: center;
+    }
+    .todo-description {
+        width: 100%;
+        padding: 10px 0px;
+        border-top: solid black 1px;
+    }
+
+.close {
+  position: relative;;
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 12px;
+  content: ' ';
+  height: 28px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+input[type='checkbox'] {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555;
+    outline: 0;
+}
+    input[type='checkbox']:checked {
+        background: #abd;
+        outline: 0;
     }
 
 #panel-location-info {

@@ -1,5 +1,10 @@
-<div>
-  {{ item.task }}
-  {{ item.complete }}
-  {{ item.desciption }}
+<div class="todo-container">
+  <div class="todo-top-container">
+    <div class="todo-checkbox">
+      <input type="checkbox">
+    </div>
+    <div class="todo-task">{{ item.task }}</div>
+    <div class="todo-remove"><a href="#" class="close"></a></div>
+  </div>
+  <div class=todo-description>{{ item.description }}</div>
 </div>
