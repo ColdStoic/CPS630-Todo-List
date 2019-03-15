@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { TodoItemsService } from '../todo-items.service';
 
 @Component({
   selector: 'app-todo-complete',
@@ -8,13 +9,18 @@ import { Input } from '@angular/core';
 })
 export class TodoCompleteComponent implements OnInit {
   @Input() item: Object;
+  @Input() index: Object;
 
-  constructor() { }
+  constructor(private todoItems: TodoItemsService) { }
 
   ngOnInit() {
   }
 
-  click() {
+  uncomplete() {
     this.item["complete"] = false;
+  }
+
+  remove() {
+    this.todoItems.removeItem(this.index);
   }
 }

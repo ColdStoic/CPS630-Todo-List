@@ -1,10 +1,10 @@
 <div class="todo-container">
   <div class="todo-top-container">
     <div class="todo-checkbox">
-      <input type="checkbox" (click)="click()">
+      <input type="checkbox" (click)="complete()">
     </div>
     <div class="todo-task">{{ item.task }}</div>
-    <div class="todo-remove"><a href="#" class="close"></a></div>
+    <div class="todo-remove" (click)="remove()"><a href="#" class="close"></a></div>
   </div>
   <div class=todo-description>{{ item.description }}</div>
 </div>
