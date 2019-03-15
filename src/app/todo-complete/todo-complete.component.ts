@@ -13,4 +13,8 @@ export class TodoCompleteComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  click() {
+    this.item["complete"] = false;
+  }
 }

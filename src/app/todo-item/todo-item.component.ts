@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-todo-item',
@@ -12,5 +13,9 @@ export class TodoItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  click() {
+    this.item["complete"] = true;
   }
 }

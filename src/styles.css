@@ -1,7 +1,7 @@
 html, body, main {
     background-image: linear-gradient(to bottom right, rgba(0, 200, 255, 0.082), rgba(0, 255, 42, 0.021));
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     height: 100%;
     margin: 0;
     min-width: 600px;
