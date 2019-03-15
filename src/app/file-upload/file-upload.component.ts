@@ -12,6 +12,7 @@ export class FileUploadComponent implements OnInit {
   jsonFile: File;
   jsonText: string;
   json: object;
+  uploaded = false;
 
   @Output() filesDropped =  new EventEmitter<FileList>();
   @Output() filesHovered =  new EventEmitter<boolean>();
@@ -32,6 +33,7 @@ export class FileUploadComponent implements OnInit {
       this.jsonText = fileReader.result as string;
       this.json = JSON.parse(this.jsonText);
       this.todoItems.setTodoItems(this.json);
+      this.uploaded = true;
     }
     fileReader.readAsText(this.jsonFile);
   }

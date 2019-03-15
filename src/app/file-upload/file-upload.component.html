@@ -1,15 +1,15 @@
 <!-- File Drop Box -->
-<div class="drop-box-container">
+<div class="drop-box-container" [style.display] = "uploaded ? 'none' : 'block'">
   <div id="drop-box"
     fileDrop
     (filesDropped)="handleDrop($event)"
     (filesHovered)="dropzoneState($event)">
     <div>Drop location<br/>file here...</div>
   </div>
+  <div class="break"></div>
+  <input
+    style="display: none"
+    type="file" (change)="onFileUpload($event)"
+    #fileInput>
+  <button (click)="fileInput.click()">Select File</button>
 </div>
-<div class="break"></div>
-<input
-  style="display: none"
-  type="file" (change)="onFileUpload($event)"
-  #fileInput>
-<button (click)="fileInput.click()">Select File</button>

@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
+import { EventEmitter, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoItemsService {
-  public todoItems: object;
+  @Output()
+  todoItems:EventEmitter<Object> = new EventEmitter();
 
   constructor() { }
 
   setTodoItems(json) {
-    this.todoItems = json;
+    this.todoItems.emit(json);
     console.log(this.todoItems);
   }
 }
