@@ -8,6 +8,6 @@
 
   <h2>Completed</h2>
   <div *ngFor="let item of items.todo">
-    <app-todo-complete *ngIf="item.complete" [item]="item"></app-todo-complete>
+    <app-todo-complete *ngIf="item.complete" [item]="item" [style.opacity] = "item.complete ? '0.5' : '1'"></app-todo-complete>
   </div>
 </div>
