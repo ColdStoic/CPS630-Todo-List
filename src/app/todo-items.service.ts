@@ -10,7 +10,6 @@ export class TodoItemsService {
 
   setTodoItems(json) {
     this.todoItems = json;
-    console.log("Cyka Blyat");
     console.log(this.todoItems);
   }
 }

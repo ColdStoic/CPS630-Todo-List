@@ -1,14 +1,15 @@
 <!-- File Drop Box -->
 <div class="drop-box-container">
-  <div id="drop-box">
-      <div>Drop location<br/>file here...</div>
+  <div id="drop-box"
+    fileDrop
+    (filesDropped)="handleDrop($event)"
+    (filesHovered)="dropzoneState($event)">
+    <div>Drop location<br/>file here...</div>
   </div>
 </div>
 <div class="break"></div>
-<!-- <input id="file-input" type="file" onchange="handleFiles(this.files)"> -->
-<!-- <input type="file" (change)="onFileChanged($event)"> -->
 <input
   style="display: none"
-  type="file" (change)="onFileChanged($event)"
+  type="file" (change)="onFileUpload($event)"
   #fileInput>
 <button (click)="fileInput.click()">Select File</button>
