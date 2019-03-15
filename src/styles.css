@@ -76,7 +76,9 @@ html, body, main {
     width: 100%;
     padding: 10px;
     box-shadow: 1px 1px 50px 1px #e7e7e7;
+    border-radius: 5px;
     border: solid black 1px;
+    margin: 15px 0px;
 }
     .todo-top-container {
         width: 100%;

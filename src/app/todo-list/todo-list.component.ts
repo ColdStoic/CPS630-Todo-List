@@ -14,6 +14,11 @@ export class TodoListComponent implements OnInit {
         {
             "task": "Complete this lab",
             "complete": false,
+            "description": "Crown Royal is a blended Canadian whisky owned by Diageo, which purchased the brand when the Seagram portfolio was dissolved in 2000. It is the top-selling Canadian whisky in the United States."
+        },
+        {
+            "task": "Buy whiskey",
+            "complete": false,
             "description": "description of the task"
         },
         {
