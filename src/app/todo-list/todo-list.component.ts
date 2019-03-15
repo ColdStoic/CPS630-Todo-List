@@ -16,8 +16,4 @@ export class TodoListComponent implements OnInit {
       this.items = data
     )
   }
-
-  click() {
-    console.log(this.items);
-  }
 }

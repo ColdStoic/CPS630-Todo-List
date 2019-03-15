@@ -1,13 +1,13 @@
 {
     "todo":[
         {
-            "task": "title of task",
+            "task": "Complete this lab",
             "complete": false,
             "description": "description of the task"
         },
         {
-            "task": "task 2",
-            "complete": false,
+            "task": "Cyka Blyat",
+            "complete": true,
             "description": "description of the task"
         }
     ]
