@@ -5,12 +5,14 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppComponent } from './app.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FileUploadComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,

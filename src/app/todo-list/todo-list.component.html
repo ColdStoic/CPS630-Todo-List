@@ -2,12 +2,8 @@
   todo-list works!
 </p>
 
-<ul *ngIf="items">
-  <li *ngFor="let item of items.todo">
-    {{ item.task }}
-    {{ item.complete }}
-    {{ item.desciption }}
-  </li>
-</ul>
+<div *ngIf="items">
+  <app-todo-item *ngFor="let item of items.todo" [item]="item"></app-todo-item>
+</div>
 
 <button (click)="click()">Select File</button>  
