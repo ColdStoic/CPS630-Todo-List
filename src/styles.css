@@ -29,7 +29,7 @@ html, body, main {
     justify-content: center;
 }
     .container h1 {
-        font-size: 60px;
+        font-size: 50px;
         text-align: center;
         width: 100%;
     }
@@ -91,6 +91,7 @@ html, body, main {
         display: flex;
         justify-content: center;
         width: 30px;
+        transition: all 200ms;
     }
     .todo-task {
         padding-left: 1%;
@@ -115,6 +116,7 @@ html, body, main {
   opacity: 0.7;
   position: relative;;
   width: 32px;
+  transition: all 200ms;
 }
 .close:hover {
   opacity: 1;
@@ -163,6 +165,7 @@ input[type='checkbox'] {
     margin: 15px 0px;
     padding: 10px;
     position: relative;
+    transition: all 200ms;
     width: 478px;
 }
     .add-item:hover {
