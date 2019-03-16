@@ -14,11 +14,21 @@ export class TodoItemsService {
   setTodoItems(json) {
     this.json = json;
     this.todoItems.emit(json);
-    console.log(this.todoItems);
   }
 
   addItem(item) {
-    this.json["todo"].push(item);
+    var isDuplicate = false;
+    for (var index = 0; index < this.json["todo"].length; ++index) {
+      var task = this.json["todo"][index];
+      if(task["task"] == item["task"]){
+        alert("Cannot add duplicate tasks.");
+        isDuplicate = true;
+        break;
+      }
+    }
+    if (!isDuplicate) {
+      this.json["todo"].push(item);
+    }
   }
 
   removeItem(index) {

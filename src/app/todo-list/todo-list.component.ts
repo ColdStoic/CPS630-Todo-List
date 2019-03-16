@@ -8,8 +8,8 @@ import { TodoItemsService } from '../todo-items.service';
 })
 export class TodoListComponent implements OnInit {
   items: Object;
-  json = 
-  `{
+  json: string;
+/*   `{
     "todo":[
         {
             "task": "Complete this lab",
@@ -27,13 +27,13 @@ export class TodoListComponent implements OnInit {
             "description": "Never to be said out loud or unironically."
         }
     ]
-}`
+}` */
 
   constructor(private todoItems: TodoItemsService) { }
 
   ngOnInit() {
     this.todoItems.todoItems.subscribe(data =>
-      this.items = data
+        this.items = data
     )
 
     var json2 = JSON.parse(this.json)

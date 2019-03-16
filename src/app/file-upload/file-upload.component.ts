@@ -20,7 +20,7 @@ export class FileUploadComponent implements OnInit {
   constructor (private todoItems: TodoItemsService) { }
   
   ngOnInit() {
-    this.uploaded = true;
+    //this.uploaded = true;
   }
 
   onFileUpload(event) {

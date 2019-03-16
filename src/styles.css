@@ -90,21 +90,22 @@ html, body, main {
     .todo-checkbox {
         display: flex;
         justify-content: center;
-        width: 6%;
+        width: 30px;
     }
     .todo-task {
         padding-left: 1%;
-        width: 88%;
+        width: 413px;
         word-wrap: break-word;
     }
     .todo-remove {
         display: flex;
         justify-content: center;
-        width: 5%;
+        width: 26px;
     }
     .todo-description {
         border-top: solid black 1px;
         padding: 10px 0px;
+        white-space: pre-line;
         width: 100%;
         word-wrap: break-word;
     }
@@ -174,7 +175,7 @@ input[type='checkbox'] {
     box-shadow: 1px 1px 50px 1px #e7e7e7;
     margin: 15px 0px;
     padding: 10px;
-    width: 100%;
+    width: 478px;
 }
     .add-form-top-container {
         border-bottom: solid black 1px;
@@ -185,17 +186,17 @@ input[type='checkbox'] {
     }
     .add-form-task {
         padding-right: 1%;
-        width: 75%;
+        width: 333px;
     }
     .add-form-checkbox {
         display: flex;
         justify-content: center;
-        width: 12%;
+        width: 70px;
     }
     .add-form-remove {
         display: flex;
         justify-content: center;
-        width: 12%;
+        width: 70px;
     }
     .add-form-description {
         border-top: solid black 1px;
