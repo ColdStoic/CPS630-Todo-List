@@ -3,8 +3,8 @@
     <div class="todo-checkbox">
       <input type="checkbox" (click)="complete()">
     </div>
-    <div class="todo-task">{{ item.task }}</div>
+    <div class="todo-task">{{ item["task"] }}</div>
     <div class="todo-remove" (click)="remove()"><a href="#" class="close"></a></div>
   </div>
-  <div class=todo-description>{{ item.description }}</div>
+  <div class=todo-description>{{ item["description"] }}</div>
 </div>

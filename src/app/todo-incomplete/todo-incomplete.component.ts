@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { TodoItemsService } from '../todo-items.service';
+import { TodoItem } from '../todo-item'
 
 @Component({
   selector: 'app-todo-incomplete',

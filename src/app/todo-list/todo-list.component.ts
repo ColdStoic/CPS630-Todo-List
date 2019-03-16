@@ -9,25 +9,6 @@ import { TodoItemsService } from '../todo-items.service';
 export class TodoListComponent implements OnInit {
   items: Object;
   json: string;
-/*   `{
-    "todo":[
-        {
-            "task": "Complete this lab",
-            "complete": false,
-            "description": "All is to be done in Angular.."
-        },
-        {
-            "task": "Buy whiskey",
-            "complete": false,
-            "description": "Crown Royal is a blended Canadian whisky owned by Diageo, which purchased the brand when the Seagram portfolio was dissolved in 2000. It is the top-selling Canadian whisky in the United States."
-        },
-        {
-            "task": "Cyka Блять",
-            "complete": true,
-            "description": "Never to be said out loud or unironically."
-        }
-    ]
-}` */
 
   constructor(private todoItems: TodoItemsService) { }
 
@@ -35,8 +16,5 @@ export class TodoListComponent implements OnInit {
     this.todoItems.todoItems.subscribe(data =>
         this.items = data
     )
-
-    var json2 = JSON.parse(this.json)
-    this.todoItems.setTodoItems(json2);
   }
 }

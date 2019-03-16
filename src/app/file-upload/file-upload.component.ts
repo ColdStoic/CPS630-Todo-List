@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoItemsService } from '../todo-items.service';
-import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
+import { EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-file-upload',

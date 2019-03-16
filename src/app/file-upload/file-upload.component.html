@@ -2,8 +2,8 @@
 <div class="drop-box-container" [style.display] = "uploaded ? 'none' : 'block'">
   <div id="drop-box"
     fileDrop
-    (filesDropped)="handleDrop($event)"
-    (filesHovered)="dropzoneState($event)">
+    filesDropped
+    filesHovered>
     <div>Drop todo.json<br/>file here...</div>
   </div>
   <div class="break"></div>
@@ -11,5 +11,4 @@
     style="display: none"
     type="file" (change)="onFileUpload($event)"
     #fileInput>
-<!--   <button (click)="fileInput.click()">Select File</button> -->
 </div>
