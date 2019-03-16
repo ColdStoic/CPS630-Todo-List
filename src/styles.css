@@ -8,12 +8,12 @@ html, body, main {
     padding: 0;
     width: 100%;
 
-    /* Disable text selection */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
+    /* Disable text selection */
     user-select: none; /* Non-prefixed version, currently */
 }
     a {
@@ -46,7 +46,7 @@ html, body, main {
 }
 
 .todo-container-main {
-    width: 550px;
+    width: 500px;
 }
 
 .drop-box-container {
@@ -73,58 +73,58 @@ html, body, main {
     }
 
 .todo-container {
-    width: 100%;
-    padding: 10px;
-    box-shadow: 1px 1px 50px 1px #e7e7e7;
     border-radius: 5px;
     border: solid black 1px;
+    box-shadow: 1px 1px 50px 1px #e7e7e7;
     margin: 15px 0px;
+    padding: 10px;
+    width: 478px;
 }
     .todo-top-container {
-        width: 100%;
+        border-bottom: solid black 1px;
         display: flex;
         flex-flow: row wrap;
         padding: 10px 0px;
-        border-bottom: solid black 1px;
+        width: 100%;
     }
     .todo-checkbox {
         display: flex;
-        width: 6%;
         justify-content: center;
+        width: 6%;
     }
     .todo-task {
-        width: 88%;
         padding-left: 1%;
+        width: 88%;
         word-wrap: break-word;
     }
     .todo-remove {
         display: flex;
-        width: 5%;
         justify-content: center;
+        width: 5%;
     }
     .todo-description {
-        width: 100%;
-        padding: 10px 0px;
         border-top: solid black 1px;
+        padding: 10px 0px;
+        width: 100%;
         word-wrap: break-word;
     }
 
 .close {
-  position: relative;;
-  width: 32px;
   height: 32px;
   opacity: 0.7;
+  position: relative;;
+  width: 32px;
 }
 .close:hover {
   opacity: 1;
 }
 .close:before, .close:after {
-  position: absolute;
-  left: 12px;
+  background-color: #333;
   content: ' ';
   height: 28px;
+  left: 12px;
+  position: absolute;
   width: 2px;
-  background-color: #333;
 }
 .close:before {
   transform: rotate(45deg);
@@ -134,15 +134,15 @@ html, body, main {
 }
 
 input[type='checkbox'] {
-    position: relative;
-    top: -5px;
     -webkit-appearance: none;
-    width: 25px;
-    height: 25px;
     background: white;
     border-radius: 5px;
     border: 2px solid #555;
+    height: 25px;
     outline: 0;
+    position: relative;
+    top: -5px;
+    width: 25px;
 }
     input[type='checkbox']:checked {
         background: #abd;
@@ -150,95 +150,95 @@ input[type='checkbox'] {
     }
 
 .add-item {
-    width: 100%;
-    height: 30px;
+    /* text-align: center; */
+    align-items: center;
     border-radius: 5px;
     border: solid gray 1px;
-    color: gray;
-    align-items: center;
-    /* text-align: center; */
-    display: flex;
-    justify-content: center;
     box-shadow: 1px 1px 50px 1px #e7e7e7;
-    padding: 10px;
+    color: gray;
+    display: flex;
+    height: 30px;
+    justify-content: center;
     margin: 15px 0px;
+    padding: 10px;
     position: relative;
+    width: 478px;
 }
     .add-item:hover {
         border: solid black 1px;
         color: black;
     }
 .add-form-container {
-    width: 100%;
-    padding: 10px;
-    box-shadow: 1px 1px 50px 1px #e7e7e7;
     border-radius: 5px;
     border: solid black 1px;
+    box-shadow: 1px 1px 50px 1px #e7e7e7;
     margin: 15px 0px;
+    padding: 10px;
+    width: 100%;
 }
     .add-form-top-container {
-        width: 100%;
+        border-bottom: solid black 1px;
         display: flex;
         flex-flow: row wrap;
         padding: 0px 0px 10px 0px;
-        border-bottom: solid black 1px;
+        width: 100%;
     }
     .add-form-task {
-        width: 75%;
         padding-right: 1%;
+        width: 75%;
     }
     .add-form-checkbox {
         display: flex;
-        width: 12%;
         justify-content: center;
+        width: 12%;
     }
     .add-form-remove {
         display: flex;
-        width: 12%;
         justify-content: center;
+        width: 12%;
     }
     .add-form-description {
-        width: 100%;
-        padding-top: 10px;
         border-top: solid black 1px;
+        padding-top: 10px;
+        width: 100%;
     }
 
 button {
-  background-color: rgb(136, 136, 136);
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  width: 60px;
+    background-color: rgb(136, 136, 136);
+    border: none;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
 }
     input[type=text], select {
-        width: 100%;
-        padding: 12px 20px;
-        display: inline-block;
-        border: 1px solid #ccc;
         border-radius: 4px;
+        border: 1px solid #ccc;
         box-sizing: border-box;
+        display: inline-block;
         font-size: 18px;
+        padding: 12px 20px;
+        width: 100%;
     }
     textarea, select {
-        width: 100%;
-        padding: 12px 20px;
-        display: inline-block;
-        border: 1px solid #ccc;
         border-radius: 4px;
+        border: 1px solid #ccc;
         box-sizing: border-box;
-        resize: none;
+        display: inline-block;
         font-size: 18px;
+        padding: 12px 20px;
+        resize: none;
+        width: 100%;
     }
     input[type=submit] {
-        width: 100%;
         background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        border: none;
         border-radius: 4px;
+        border: none;
+        color: white;
         cursor: pointer;
+        padding: 14px 20px;
+        width: 100%;
     }
 
 /* Footer */
@@ -258,31 +258,19 @@ button {
 }
 
 /* Responsive Scaling */
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (max-width: 600px) {
     .container-main {
-        width: 90%;
-    }
-    .panel-container {
         width: 100%;
     }
 }
-    /* Small devices (portrait tablets and large phones, 600px and up) */
     @media screen and (min-width: 600px) {
         .container-main {
             width: 90%;
         }
-        .panel-container {
-            width: 100%;
-        }
     }
 
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         .container-main {
-            width: 80%;
-        }
-        .panel-container {
-            width: 47%;
+            width: 60%;
         }
     }

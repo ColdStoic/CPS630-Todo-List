@@ -15,17 +15,17 @@ export class TodoItemFormComponent implements OnInit {
   addingTask = false;
 
   onAddingTask() {
+    this.model = new TodoItem('', false, '');
     this.addingTask = true;
   }
 
   onSubmit() {
     this.addingTask = false;
     this.todoItems.addItem(this.model);
-    console.log(this.model);
   }
 
-  newTodoItem() {
-    this.model = new TodoItem('', false, '');
+  onCancel() {
+    this.addingTask = false;
   }
 
   ngOnInit() {
