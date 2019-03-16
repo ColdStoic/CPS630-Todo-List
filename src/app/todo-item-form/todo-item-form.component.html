@@ -1,0 +1,25 @@
+<div>
+  <div [hidden]="submitted">
+    <h1>Add Task</h1>
+    <form (ngSubmit)="onSubmit()" #TodoItemForm="ngForm">
+      <div>
+        <label for="task">Task</label>
+        <input type="text" id="task"
+                required
+                [(ngModel)]="model.task" name="task"
+                #name="ngModel">
+        <div [hidden]="name.valid || name.pristine">
+          Name is required
+        </div>
+      </div>
+  
+      <div>
+        <label for="description">Description</label>
+        <input type="text" id="description" [(ngModel)]="model.description" name="description">
+      </div>
+  
+      <button type="submit" [disabled]="!TodoItemForm.form.valid">Submit</button>
+      <button type="button" (click)="newTodoItem(); TodoItemForm.reset()">New TodoItem</button>
+    </form>
+  </div>
+</div>

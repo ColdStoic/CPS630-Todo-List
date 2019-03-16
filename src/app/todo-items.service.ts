@@ -17,6 +17,10 @@ export class TodoItemsService {
     console.log(this.todoItems);
   }
 
+  addItem(item) {
+    this.json["todo"].push(item);
+  }
+
   removeItem(index) {
     this.json["todo"].splice(index, 1);
   }
