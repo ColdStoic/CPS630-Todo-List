@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TodoItemComponent } from './todo-item.component';
+import { TodoItemComponent } from './todo-incomplete.component';
 
 describe('TodoItemComponent', () => {
   let component: TodoItemComponent;

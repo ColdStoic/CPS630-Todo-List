@@ -3,11 +3,11 @@ import { Input } from '@angular/core';
 import { TodoItemsService } from '../todo-items.service';
 
 @Component({
-  selector: 'app-todo-item',
-  templateUrl: './todo-item.component.html',
-  styleUrls: ['./todo-item.component.css']
+  selector: 'app-todo-incomplete',
+  templateUrl: './todo-incomplete.component.html',
+  styleUrls: ['./todo-incomplete.component.css']
 })
-export class TodoItemComponent implements OnInit {
+export class TodoIncompleteComponent implements OnInit {
   @Input() item: Object;
   @Input() index: Object;
 

@@ -5,7 +5,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppComponent } from './app.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoItemComponent } from './todo-item/todo-item.component';
+import { TodoIncompleteComponent } from './todo-incomplete/todo-incomplete.component';
 import { TodoCompleteComponent } from './todo-complete/todo-complete.component';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { TodoCompleteComponent } from './todo-complete/todo-complete.component';
     AppComponent,
     FileUploadComponent,
     TodoListComponent,
-    TodoItemComponent,
+    TodoIncompleteComponent,
     TodoCompleteComponent
   ],
   imports: [
