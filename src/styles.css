@@ -95,6 +95,7 @@ html, body, main {
     .todo-task {
         width: 88%;
         padding-left: 1%;
+        word-wrap: break-word;
     }
     .todo-remove {
         display: flex;
@@ -105,6 +106,7 @@ html, body, main {
         width: 100%;
         padding: 10px 0px;
         border-top: solid black 1px;
+        word-wrap: break-word;
     }
 
 .close {
@@ -132,6 +134,8 @@ html, body, main {
 }
 
 input[type='checkbox'] {
+    position: relative;
+    top: -5px;
     -webkit-appearance: none;
     width: 25px;
     height: 25px;
@@ -145,75 +149,96 @@ input[type='checkbox'] {
         outline: 0;
     }
 
-#panel-location-info {
-    text-align: center;
+.add-item {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: solid gray 1px;
+    color: gray;
+    align-items: center;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 50px 1px #e7e7e7;
+    padding: 10px;
+    margin: 15px 0px;
+    position: relative;
 }
-    .panel-container-main {
+    .add-item:hover {
+        border: solid black 1px;
+        color: black;
+    }
+.add-form-container {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 1px 1px 50px 1px #e7e7e7;
+    border-radius: 5px;
+    border: solid black 1px;
+    margin: 15px 0px;
+}
+    .add-form-top-container {
+        width: 100%;
         display: flex;
         flex-flow: row wrap;
-        justify-content: center; /* centers all content (widgets) */
+        padding: 0px 0px 10px 0px;
+        border-bottom: solid black 1px;
+    }
+    .add-form-task {
+        width: 75%;
+        padding-right: 1%;
+    }
+    .add-form-checkbox {
+        display: flex;
+        width: 12%;
+        justify-content: center;
+    }
+    .add-form-remove {
+        display: flex;
+        width: 12%;
+        justify-content: center;
+    }
+    .add-form-description {
         width: 100%;
+        padding-top: 10px;
+        border-top: solid black 1px;
     }
-    /* Location Panels */
-    .panel-container {
-        margin: 5px;
-    }
-    .panel {
-        align-items: center; /* Vertical center alignment */
-        background-color: white;
+
+button {
+  background-color: rgb(136, 136, 136);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 60px;
+}
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
         border-radius: 4px;
-        border: 1px solid #cdcecf;
-        box-shadow: 1px 1px 50px 1px #e7e7e7;
-        display: flex;
-        font-size: 20px;
-        justify-content: center; /* Horizontal center alignment */
-        margin: 0;
-        overflow: hidden;
-        padding: 20px 10px;
-        transition: all 200ms;
-        word-wrap: break-word;
+        box-sizing: border-box;
+        font-size: 18px;
     }
-    .panel:hover {
-        transform: scale(1.05);
-    }
-    .panel div {
-        margin-right: 20px;
-    }
-    .panel-icon {
-        font-size: 40px;
-        margin: 15px;
-        text-align: center;
-        width: 50%;
-    }
-    .panel-info {
-        display: flex;
-        font-weight: bold;
+    textarea, select {
         width: 100%;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: none;
+        font-size: 18px;
     }
-    .panel-info div {
-        align-items: center; /* Vertical center alignment */
-        display: flex;
-        justify-content: center; /* Horizontal center alignment */
+    input[type=submit] {
         width: 100%;
-    }
-    /* Material Colours */
-    .panel.lat {
-        background-color: #84FFFF;
-    }
-    .panel.lon {
-        background-color: #2196F3;
-    }
-    .panel.name {
-        background-color: #B3E5FC;
-    }
-    .panel.city {
-        background-color: #9C27B0;
-    }
-    .panel.state {
         background-color: #4CAF50;
-    }
-    .panel.country {
-        background-color: #F44336;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
     }
 
 /* Footer */

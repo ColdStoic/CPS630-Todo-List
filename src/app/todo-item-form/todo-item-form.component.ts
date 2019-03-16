@@ -12,15 +12,17 @@ export class TodoItemFormComponent implements OnInit {
 
   model = new TodoItem('', false, '');
   submitted = false;
+  addingTask = false;
+
+  onAddingTask() {
+    this.addingTask = true;
+  }
 
   onSubmit() {
-    this.submitted = true;
+    this.addingTask = false;
     this.todoItems.addItem(this.model);
     console.log(this.model);
   }
-
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
 
   newTodoItem() {
     this.model = new TodoItem('', false, '');

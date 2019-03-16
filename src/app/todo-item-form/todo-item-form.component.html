@@ -1,25 +1,35 @@
 <div>
-  <div [hidden]="submitted">
-    <h1>Add Task</h1>
-    <form (ngSubmit)="onSubmit()" #TodoItemForm="ngForm">
-      <div>
-        <label for="task">Task</label>
-        <input type="text" id="task"
-                required
-                [(ngModel)]="model.task" name="task"
-                #name="ngModel">
-        <div [hidden]="name.valid || name.pristine">
-          Name is required
+  <div [hidden]="addingTask">
+    <div class="add-item" (click)="onAddingTask()">Add New Task</div>
+  </div>
+  
+
+  <div [hidden]="!addingTask">
+    <form (ngSubmit)="onSubmit()" #TodoItemForm="ngForm" name="add-item-form">
+      <div class="add-form-container">
+        <div class="add-form-top-container">
+          <div class="add-form-task">
+            <input type="text" id="task"
+                    required
+                    [(ngModel)]="model.task" name="task"
+                    #name="ngModel"
+                    placeholder="Task">
+            <div [hidden]="name.valid || name.pristine">
+              Name is required
+            </div>
+          </div>
+          <div class="add-form-checkbox">
+            <button type="submit" [disabled]="!TodoItemForm.form.valid">Add</button>
+          </div>
+          <div class="add-form-remove">
+            <button type="button" (click)="newTodoItem(); TodoItemForm.reset()">Cancel</button>
+            
+          </div>
+        </div>
+        <div class="add-form-description">
+          <textarea rows="4" id="description" [(ngModel)]="model.description" name="description" placeholder="Description"></textarea>
         </div>
       </div>
-  
-      <div>
-        <label for="description">Description</label>
-        <input type="text" id="description" [(ngModel)]="model.description" name="description">
-      </div>
-  
-      <button type="submit" [disabled]="!TodoItemForm.form.valid">Submit</button>
-      <button type="button" (click)="newTodoItem(); TodoItemForm.reset()">New TodoItem</button>
     </form>
   </div>
 </div>
