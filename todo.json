@@ -6,6 +6,11 @@
             "description": "All is to be done in Angular.."
         },
         {
+            "task": "Complete this lab",
+            "complete": false,
+            "description": "All is to be done in Angular.."
+        },
+        {
             "task": "Buy whiskey",
             "complete": false,
             "description": "Crown Royal is a blended Canadian whisky owned by Diageo, which purchased the brand when the Seagram portfolio was dissolved in 2000. It is the top-selling Canadian whisky in the United States."

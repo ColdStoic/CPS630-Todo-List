@@ -17,6 +17,9 @@ export class TodoItemFormComponent implements OnInit {
   onAddingTask() {
     this.model = new TodoItem('', false, '');
     this.addingTask = true;
+    setTimeout(function(){
+      document.getElementById("task").focus();
+    }, 100);
   }
 
   onSubmit() {

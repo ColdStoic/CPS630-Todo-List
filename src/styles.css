@@ -4,16 +4,17 @@ html, body, main {
     font-size: 18px;
     height: 100%;
     margin: 0;
+    min-height: 100%;
     min-width: 600px;
     padding: 0;
     width: 100%;
 
+    /* Disable text selection */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-    /* Disable text selection */
     user-select: none; /* Non-prefixed version, currently */
 }
     a {
@@ -27,6 +28,7 @@ html, body, main {
     align-items: center;
     display: flex;
     justify-content: center;
+    min-height: 100%;
 }
     .container h1 {
         font-size: 50px;
@@ -37,17 +39,17 @@ html, body, main {
 /* Main Map Container */
 .container-main {
     background-color: white;
+    border-radius: 5px;
     border: 1px solid #cdcecf;
-    box-shadow: 1px 1px 50px 1px #e7e7e7;
+    box-shadow: 1px 1px 10px 1px #e7e7e7;
     display: flex;
     flex-flow: row wrap;
     height: 100%;
     justify-content: center; /* centers all content (widgets) */
 }
-
-.todo-container-main {
-    width: 500px;
-}
+    .todo-container-main {
+        width: 500px;
+    }
 
 .drop-box-container {
     display: flex;
@@ -57,9 +59,8 @@ html, body, main {
     #drop-box {
         align-items: center;
         border-radius: 5px;
-        border-style: dashed;
-        border: 5px solid black;
-        box-shadow: 1px 1px 50px 1px #e7e7e7;
+        border: 5px dashed black;
+        box-shadow: 1px 1px 10px 1px #e7e7e7;
         display: flex;
         height: 200px;
         justify-content: center;
@@ -74,8 +75,8 @@ html, body, main {
 
 .todo-container {
     border-radius: 5px;
-    border: solid black 1px;
-    box-shadow: 1px 1px 50px 1px #e7e7e7;
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px 1px #e7e7e7;
     margin: 15px 0px;
     padding: 10px;
     width: 478px;
@@ -112,52 +113,62 @@ html, body, main {
     }
 
 .close {
-  height: 32px;
-  opacity: 0.7;
+  height: 26px;
+  opacity: 0.4;
   position: relative;;
-  width: 32px;
+  width: 26px;
   transition: all 200ms;
 }
-.close:hover {
-  opacity: 1;
-}
-.close:before, .close:after {
-  background-color: #333;
-  content: ' ';
-  height: 28px;
-  left: 12px;
-  position: absolute;
-  width: 2px;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
-}
+    .close:hover, .close:focus {
+        opacity: 1;
+    }
+    .close:before, .close:after {
+        background-color: black;
+        content: ' ';
+        height: 26px;
+        left: 12px;
+        position: absolute;
+        width: 2px;
+    }
+    .close:before {
+        transform: rotate(45deg);
+    }
+    .close:after {
+        transform: rotate(-45deg);
+    }
 
 input[type='checkbox'] {
     -webkit-appearance: none;
     background: white;
     border-radius: 5px;
-    border: 2px solid #555;
+    /* border: 2px solid gray; */
     height: 25px;
-    outline: 0;
+    outline: none;
     position: relative;
     top: -5px;
     width: 25px;
+
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    border: 2px solid #cdcecf;
 }
+    input[type='checkbox']:hover, input[type='checkbox']:focus {
+        border: 2px solid black;
+        box-shadow: 0 0 5px rgb(214, 214, 214);
+    }
     input[type='checkbox']:checked {
-        background: #abd;
-        outline: 0;
+        background: gray;
+        outline: none;
     }
 
 .add-item {
     /* text-align: center; */
     align-items: center;
     border-radius: 5px;
-    border: solid gray 1px;
-    box-shadow: 1px 1px 50px 1px #e7e7e7;
+    border: 1px solid #cdcecf;
+    box-shadow: 1px 1px 10px 1px #e7e7e7;
     color: gray;
     display: flex;
     height: 30px;
@@ -168,14 +179,15 @@ input[type='checkbox'] {
     transition: all 200ms;
     width: 478px;
 }
-    .add-item:hover {
+    .add-item:hover, .add-item:focus {
         border: solid black 1px;
         color: black;
     }
+
 .add-form-container {
     border-radius: 5px;
     border: solid black 1px;
-    box-shadow: 1px 1px 50px 1px #e7e7e7;
+    box-shadow: 1px 1px 10px 1px #e7e7e7;
     margin: 15px 0px;
     padding: 10px;
     width: 478px;
@@ -215,41 +227,49 @@ button {
     text-align: center;
     text-decoration: none;
     width: 60px;
+
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    border: 2px solid #cdcecf;
+    outline: none;
 }
-    input[type=text], select {
+    button:focus {
+        border: 2px solid black;
+        box-shadow: 0 0 5px rgb(214, 214, 214);
+    }
+    button::-moz-focus-inner {
+        border: 0;
+    }
+    input[type=text], textarea, select {
         border-radius: 4px;
-        border: 1px solid #ccc;
         box-sizing: border-box;
         display: inline-block;
         font-size: 18px;
         padding: 12px 20px;
         width: 100%;
-    }
-    textarea, select {
-        border-radius: 4px;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        display: inline-block;
-        font-size: 18px;
-        padding: 12px 20px;
+
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        -webkit-transition: all 0.30s ease-in-out;
+        border: 2px solid #cdcecf;
+        outline: none;
+
         resize: none;
-        width: 100%;
     }
-    input[type=submit] {
-        background-color: #4CAF50;
-        border-radius: 4px;
-        border: none;
-        color: white;
-        cursor: pointer;
-        padding: 14px 20px;
-        width: 100%;
+    input[type=text]:focus, textarea:focus {
+        border: 2px solid black;
+        box-shadow: 0 0 5px rgb(214, 214, 214);
     }
 
 /* Footer */
 .footer {
     background: white;
-    box-shadow: 1px 1px 50px 1px #e7e7e7;
-    margin: 0;
+    box-shadow: 1px 1px 10px 1px #e7e7e7;
+    height: 160px;
+    margin-top: 40px;
     padding: 15px 0;
     text-align: center;
     width: 100%;
@@ -272,7 +292,6 @@ button {
             width: 90%;
         }
     }
-
     @media screen and (min-width: 1024px) {
         .container-main {
             width: 60%;
