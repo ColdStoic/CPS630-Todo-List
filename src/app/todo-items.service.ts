@@ -20,7 +20,7 @@ export class TodoItemsService {
     var isDuplicate = false;
     for (var index = 0; index < this.json["todo"].length; ++index) {
       var task = this.json["todo"][index];
-      if(task["task"] == item["task"]){
+      if(task["task"].toLowerCase() == item["task"].toLowerCase()) {
         alert("Cannot add duplicate tasks.");
         isDuplicate = true;
         break;

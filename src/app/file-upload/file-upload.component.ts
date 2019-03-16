@@ -33,10 +33,24 @@ export class FileUploadComponent implements OnInit {
     fileReader.onload = (e) => {
       this.jsonText = fileReader.result as string;
       this.json = JSON.parse(this.jsonText);
+      this.duplicationRemover();
       this.todoItems.setTodoItems(this.json);
       this.uploaded = true;
     }
     fileReader.readAsText(this.jsonFile);
+  }
+
+  duplicationRemover() {
+    var isDuplicate = false;
+    for (var i = 0; i < this.json["todo"].length; ++i) {
+      var task = this.json["todo"][i];
+      for (var j = (i + 1); j < this.json["todo"].length; ++j) {
+        var task2 = this.json["todo"][j];
+        if(task["task"].toLowerCase() == task2["task"].toLowerCase()) {
+          this.json["todo"].splice(j, 1);
+        }
+      }
+    }
   }
   
   @HostListener('drop', ['$event'])
